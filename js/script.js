@@ -14,7 +14,16 @@ let incr = 10,
 
     console.log(5%2);
 
-    console.log(2*8 == 8);
+    console.log(2 + 2 * 2 !== '6');
+    
+   // && - и
+   // || - или
+
+   const isChecked = false,
+         isClose = false;
+        
+   console.log(isChecked || !isClose);      
+    
 
 //const category = 'toys';
 
