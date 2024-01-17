@@ -1,28 +1,86 @@
-"use strict";
 
-console.log('arr' + "- object");
-console.log(4 +  + "5");
+/* Задача №1.
+ Создать переменную numberOfFilms и в неё поместить ответот пользователя на вопрос:
+ 'Сколько фильмов вы уже смотрели?'*/
 
-let incr = 10,
-    decr = 10;
+const numberOfFilms = +prompt('Сколько фильмов вы уже смотрели?', '');
+
+
+/* Задача №2.
+ Создать объект personalMovieDB и в него поместить такие свойства:
+ - count - сюда передается ответ на первый  вопрос
+ - movies - в это свойство поместить пустой объект
+ - actors - тоже переместить пустой обьект
+ - genres - сюда поместить пустой массив
+ - privat - в это свойство поместить boolean(логическое) значение false*/
+
+const personalMoviDB = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false
+}; 
+
+/* Задача №3.
+ Задайте пользователь по два раза вопросы:
+   - 'Один из последних просмотренных фильмов?'
+   - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+ Записать ответы в обьект movies в формате:
+
+   movies: {
+      'logan': '8.1'
+ }
+ Проверить, чтобы все работало без ошибок в консоли*/
+
+ const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//"use strict";
+
+
+//console.log('arr' + "- object");
+//console.log(4 +  + "5");
+
+//let incr = 10,
+   // decr = 10;
 
    //++ incr;
    //-- decr;
     
-    console.log(++incr);
-    console.log(--decr);
+   // console.log(++incr);
+   // console.log(--decr);
 
-    console.log(5%2);
+   // console.log(5%2);
 
-    console.log(2 + 2 * 2 !== '6');
+    //console.log(2 + 2 * 2 !== '6');
     
    // && - и
    // || - или
 
-   const isChecked = false,
-         isClose = false;
+ //  const isChecked = false,
+         //isClose = false;
         
-   console.log(isChecked || !isClose);      
+  // console.log(isChecked || !isClose);      
     
 
 //const category = 'toys';
