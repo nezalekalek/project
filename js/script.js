@@ -1,5 +1,36 @@
 "use strict";
 
+let num = 50;
+
+//while(num <= 55) {
+  // console.log(num);
+  // num++;
+//}
+
+/*do {
+   console.log(num);
+   num++;
+}
+while (num < 55);*/
+
+for (let i = 1; i < 10; i++) {
+   if (i === 6) {
+      // break;
+      continue;
+   }
+   
+   console.log(i);
+   
+}
+
+
+
+
+
+
+
+
+
 /*if(1){
    console.log('Ок!');
 } else {
@@ -18,7 +49,7 @@ if(num < 49) {
 
 (num === 50) ? console.log('Ок') : console.log('Error'); // Тернарный оператор*/
 
-const num = 50;
+/*const num = 50;
 
 switch(num) {
    case 49:
@@ -33,7 +64,7 @@ switch(num) {
    default:
       console.log('Не в этот раз');
       break;
-}
+}*/
 
 
 
@@ -90,20 +121,6 @@ personalMoviDB.movies[c] = d;
 
 console.log(personalMoviDB);*/
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //"use strict";
