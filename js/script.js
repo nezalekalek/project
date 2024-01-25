@@ -42,7 +42,7 @@ personalMoviDB.movies[a] = b;
 personalMoviDB.movies[c] = d;
 
 
-console.log(personalMoviDB);
+console.log(personalMoviDB);5
    
 
 10
