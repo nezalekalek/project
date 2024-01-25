@@ -171,6 +171,12 @@ personalMoviDB.movies[a] = b;
 personalMoviDB.movies[c] = d;
 
 
+<<<<<<< HEAD
+console.log(personalMoviDB);5
+   
+
+10
+=======
 console.log(personalMoviDB);*/
 
 //************************************************************************* */
@@ -233,7 +239,12 @@ if(personalMoviDB.count < 10) {
 }
 
 
+<<<<<<< HEAD
 console.log(personalMoviDB);*/
+=======
+console.log(personalMoviDB);
+>>>>>>> f5e5a3b5899e03b8026e62529294ff94f1b7b16b
+>>>>>>> 5c85f2282e0ab67e5a3158b2f1d0bf9ed2535364
 
 
 
