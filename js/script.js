@@ -1,6 +1,12 @@
 "use strict"
 
-let num = 20;
+//Методы и свойства чисел.
+
+
+
+
+
+/*let num = 20;
 
 function showFirstMessage(text) {
    console.log(text);
@@ -9,7 +15,7 @@ function showFirstMessage(text) {
 }
 
 showFirstMessage("Hello World!");
-console.log(num);
+console.log(num);*/
 
 /*console.log(calc(4, 3));
 console.log(calc(5 ,6));
@@ -21,7 +27,7 @@ function calc(a,b) {
 }*/
 
 
-function ret() {
+/*function ret() {
    let num = 50;
   
    return num;
@@ -37,7 +43,7 @@ const logger = function() {
       console.log("Hello");
 };
 
-logger();
+logger();/*
 
 
 // Пример стрелочная функция.
@@ -46,12 +52,6 @@ const calc = (a, b) => {
    console.log('1');
    return a + b;
 };
-
-
-
-
-
-
 
 
 
@@ -241,10 +241,8 @@ if(personalMoviDB.count < 10) {
 
 <<<<<<< HEAD
 console.log(personalMoviDB);*/
-=======
-console.log(personalMoviDB);
->>>>>>> f5e5a3b5899e03b8026e62529294ff94f1b7b16b
->>>>>>> 5c85f2282e0ab67e5a3158b2f1d0bf9ed2535364
+//****************************
+//console.log(personalMoviDB);
 
 
 
