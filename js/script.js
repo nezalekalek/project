@@ -1,7 +1,116 @@
-"use strict"
+/* Практика №2.
+
+1) Первую часть задания повторить по уроку.
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводить в консоль главный обьект программы.
+
+3)Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос
+"Ваш любимый жандр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функцию вызывать не обязательно */
+ 
+"use strict";
+
+let numberOfFilms;
+
+function start () {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');    
+   }
+
+}  
+start();
+
+
+   const personalMoviDB = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false
+   
+};
+
+
+
+function rememberMyFilms() {
+   for(let i = 0; i < 2; i++) {
+      const a = prompt('Один из последних просмотренных фильмов?', ''),
+            b = prompt('На сколько оцените его ?', '');
+   
+      //        не       и            и    не    и    не    и
+      if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+         personalMoviDB.movies[a] = b;
+         console.log('done');
+      }  else{
+          console.log('error');
+          i--;
+      }   
+   }
+}
+
+//rememberMyFilms();
+
+
+
+function detectPersonLevel() {
+   if(personalMoviDB.count < 10) {
+      console.log("Просмотрено довольно мало фильмов");
+   } else if (personalMoviDB.count >= 10 && personalMoviDB.count < 30) {
+        console.log("Вы классический зритель");
+   } else if (personalMoviDB.count >= 30) {
+      console.log("Вы киноман");
+   }else{
+      console.log("Произошла ошибка");
+   }
+}
+
+//detectPersonLevel();
+
+function showMyDB (hidden) {
+   if (!hidden) {
+      console.log(personalMoviDB);
+   }
+}
+
+showMyDB(personalMoviDB.privat);
+
+function writeYourGenres() {
+   for(let i = 1; i <= 3; i++ ) {
+      personalMoviDB.genres[i - 1] = prompt(`Ваш любимый жандр под номером ${i}`);
+   }
+}
+
+
+writeYourGenres();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//"use strict"
 //Методы и свойства чисел.
 
-const str = "teSt";
+//const str = "teSt";
 //const arr = [1, 2, 4]
 
 
@@ -9,27 +118,27 @@ const str = "teSt";
 
 //console.log(str.toUpperCase());
 
-console.log(str.toLowerCase());
-console.log(str);
+//console.log(str.toLowerCase());
+//console.log(str);
 
-const fruit = "Some fruit";
+//const fruit = "Some fruit";
 
-console.log(fruit.indexOf("q"));
+//console.log(fruit.indexOf("q"));
 
-const logg = "Hello world";
+//const logg = "Hello world";
 
 //console.log(logg.slice(6, 11));
 
 //console.log(logg.substring(6, 11));
 
-console.log(logg.substr(6, 5));
+//console.log(logg.substr(6, 5));
 
-const num = 12.2;
-console.log(Math.round(num));
+//const num = 12.2;
+//console.log(Math.round(num));
 
-const test = "12.2px";
+//const test = "12.2px";
 //console.log(parseInt(test));
-console.log(parseFloat(test));
+//console.log(parseFloat(test));
 
 
 
