@@ -1,3 +1,397 @@
+"use strict";
+// ООП Прототипно - орентированное наследование.
+
+let str = "some";
+let strObj = new String(str);
+
+//console.log(typeof(str));
+//console.log(typeof(strObj));
+
+console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+      console.log("Hello");
+    }
+};
+
+const jonh = Object.create(soldier);
+
+// const jonh = {
+//    health: 100
+// };
+
+//jonh.__proto__ = soldier; старый вариант создания прототипа
+
+//Object.setPrototypeOf(jonh,soldier); // новый вариант создания прототипа
+
+//console.log(jonh.armor);
+jonh.sayHello();
+
+
+
+
+
+
+
+// Передача ссылки или значения
+/*let a = 5;
+  b = a;
+
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+   a: 5,
+   b: 1
+};*/
+
+//const copy = obj; //Ссылку 
+
+//copy.a = 10;
+
+//console.log(copy);
+//console.log(obj);
+
+/*function copy(mainObj) {
+  let objCopy = {};
+
+  let key;
+  for(key in mainObj) {
+     objCopy[key] = mainObj[key];
+  }
+
+  return objCopy;
+}
+
+const numbers = {
+   a: 2,
+   b: 5,
+   c: {
+       x: 7,
+       y: 4
+   }
+};
+
+const newNumbers =  copy(numbers);
+
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+
+console.log(newNumbers);
+console.log(numbers);*/
+
+
+// Массивы и псевдомассивы
+
+//const arr = [2, 13, 26, 8, 10];
+//arr.sort(compareNum);
+//console.log(arr);
+
+//function compareNum(a, b) {
+   //return a - b;
+//}
+//arr[99] = 0;
+//console.log(arr.length);
+//console.log(arr);
+
+//arr. forEach(function(iten, i, arr) {
+  // console.log(`${i}:  ${iten}  внутри массива ${arr}`)
+//});
+
+//arr.pop();
+//arr.push(10);
+
+//console.log(arr);
+
+//for(let i = 0; i < arr.length; i++) {
+  // console.log(arr[i]);
+//}
+
+//for(let vaiue of arr) {
+  // console.log(vaiue);
+//}
+
+
+//const str = prompt("", "");
+//const products = str.split(", ");
+//products.sort();
+//console.log(products.join('; '));
+
+
+ 
+
+
+/*const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+      border: 'black',
+      bg: 'red'
+    },
+    makeTest: function () {
+      console.log("Test");
+    }
+};
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+console.log(border);*/
+
+
+//console.log(Object.keys(options).length);
+
+//console.log(options["colors"]["border"]);
+
+//delete options.name;
+
+//console.log(options);
+
+//let counter = 0;
+//for (let key in options) {
+   //if(typeof (options[key]) ===  'object') {
+     // for(let i in options[key] ) {
+      //   console.log(`Свойство ${i} имеет значение ${options [key][i]}`);
+         //counter++;
+     // }
+  // } else {
+  //    console.log(`Свойство ${key} имеет значение ${options [key]} `);
+      //counter++;
+ //  }
+   
+//}
+//console.log(counter);
+
+
+
+
+
+
+
+// Callback функции.
+
+/*"use strict";
+
+function first() {
+   // Do something
+   setTimeout(function() {
+      console.log(1);
+   }, 500);
+}
+
+function second() {
+   console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang,callback) {
+   console.log(`Я учу: ${lang} `);
+   callback();
+}
+
+function done() {
+   console.log('Я прошел этот урок!');
+}
+
+learnJS('JavaScript', done);*/
+   
+
+
+
+
+/* Практика №2.
+
+1) Первую часть задания повторить по уроку.
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводить в консоль главный обьект программы.
+
+3)Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос
+"Ваш любимый жандр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функцию вызывать не обязательно 
+ 
+"use strict";
+
+let numberOfFilms;
+
+function start () {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');    
+   }
+
+}  
+start();
+
+
+   const personalMoviDB = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false
+   
+};
+
+
+
+function rememberMyFilms() {
+   for(let i = 0; i < 2; i++) {
+      const a = prompt('Один из последних просмотренных фильмов?', ''),
+            b = prompt('На сколько оцените его ?', '');
+   
+      //        не       и            и    не    и    не    и
+      if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+         personalMoviDB.movies[a] = b;
+         console.log('done');
+      }  else{
+          console.log('error');
+          i--;
+      }   
+   }
+}
+
+//rememberMyFilms();
+
+
+
+function detectPersonLevel() {
+   if(personalMoviDB.count < 10) {
+      console.log("Просмотрено довольно мало фильмов");
+   } else if (personalMoviDB.count >= 10 && personalMoviDB.count < 30) {
+        console.log("Вы классический зритель");
+   } else if (personalMoviDB.count >= 30) {
+      console.log("Вы киноман");
+   }else{
+      console.log("Произошла ошибка");
+   }
+}
+
+//detectPersonLevel();
+
+function showMyDB (hidden) {
+   if (!hidden) {
+      console.log(personalMoviDB);
+   }
+}
+
+showMyDB(personalMoviDB.privat);
+
+function writeYourGenres() {
+   for(let i = 1; i <= 3; i++ ) {
+      personalMoviDB.genres[i - 1] = prompt(`Ваш любимый жандр под номером ${i}`);
+   }
+}
+
+
+writeYourGenres(); */
+
+
+
+//*********************************************************************************** */
+
+
+
+
+
+//"use strict"
+//Методы и свойства чисел.
+
+//const str = "teSt";
+//const arr = [1, 2, 4]
+
+
+//console.log(str[2] = 'd');
+
+//console.log(str.toUpperCase());
+
+//console.log(str.toLowerCase());
+//console.log(str);
+
+//const fruit = "Some fruit";
+
+//console.log(fruit.indexOf("q"));
+
+//const logg = "Hello world";
+
+//console.log(logg.slice(6, 11));
+
+//console.log(logg.substring(6, 11));
+
+//console.log(logg.substr(6, 5));
+
+//const num = 12.2;
+//console.log(Math.round(num));
+
+//const test = "12.2px";
+//console.log(parseInt(test));
+//console.log(parseFloat(test));
+
+
+
+
+
+
+/*let num = 20;
+
+function showFirstMessage(text) {
+   console.log(text);
+    console.log(num);
+    
+}
+
+showFirstMessage("Hello World!");
+console.log(num);*/
+
+/*console.log(calc(4, 3));
+console.log(calc(5 ,6));
+console.log(calc(10 ,6));
+
+
+function calc(a,b) {
+   return(a + b);
+}*/
+
+
+/*function ret() {
+   let num = 50;
+  
+   return num;
+}
+
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+// Пример функция EXPRESSION
+
+const logger = function() {
+      console.log("Hello");
+};
+
+logger();/*
+
+
+// Пример стрелочная функция.
+
+const calc = (a, b) => {
+   console.log('1');
+   return a + b;
+};
+
+
 
 
 //"use strict";
@@ -115,11 +509,17 @@ personalMoviDB.movies[a] = b;
 personalMoviDB.movies[c] = d;
 
 
+<<<<<<< HEAD
+console.log(personalMoviDB);5
+   
+
+10
+=======
 console.log(personalMoviDB);*/
 
 //************************************************************************* */
 
-/* Практика 2.
+/* Практика 3.
 
 Задача №1.
 Автоматизировать вопросы пользователю про фильмы при помощи цикла.
@@ -139,7 +539,7 @@ console.log(personalMoviDB);*/
  Задача №4.
  Потренироваться и переписать цикл еще двумя способам */
 
-"use strict";
+/*"use strict";
 
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -177,7 +577,128 @@ if(personalMoviDB.count < 10) {
 }
 
 
-console.log(personalMoviDB);
+
+console.log(personalMoviDB);*/
+//****************************
+//console.log(personalMoviDB);
+
+
+
+
+
+/* Практика №4.
+
+
+Задача №1.
+У вас есть рабочее приложение, состоящее из отдельных функцийю Представте, что
+перед вами стоит задача переписать его так, чтобы все функции стали методами объекта
+personalMovieDB
+Такое случается в реальных продуктах при смене технологий или подхода к архетектуре программы
+
+Задача №2.
+Создать метод tooggleVisibleMyDB, который при вызове будет проверять свойство privat. Если
+оно false - он  переключает его в true, если true - переключает в false.
+Протестировать вместе с showMyDB.
+
+Задача №3.
+В методике writeYourGenres запретить пользователю нажать кнопку "отмена" или оставлять
+пустую строку.
+Если он это сделал - возвращать его к этому же вопросу. После того, как все жанры введены - 
+при помощи метода forEach вывести в консоль сообщения в таком виде:
+"Любимый жанр # (номер по порядку, начиная с 1) - это(название из массива)"*/
+
+
+'use strict';
+
+   const personalMoviDB = {
+   count: 0,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false,
+   start: function () {
+      personalMoviDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+  
+      while(personalMoviDB == '' || personalMoviDB.count == null || isNaN
+      (personalMoviDB.count)) {
+         personalMoviDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');    
+     }
+  
+  }, 
+  rememberMyFilms:function () {
+   for(let i = 0; i < 2; i++) {
+      const a = prompt('Один из последних просмотренных фильмов?', ''),
+            b = prompt('На сколько оцените его ?', '');
+   
+      //        не       и            и    не    и    не    и
+      if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+         personalMoviDB.movies[a] = b;
+         console.log('done');
+      }  else{
+          console.log('error');
+          i--;
+      }   
+   }
+},
+detectPersonLevel: function() {
+   if(personalMoviDB.count < 10) {
+      console.log("Просмотрено довольно мало фильмов");
+   } else if (personalMoviDB.count >= 10 && personalMoviDB.count < 30) {
+        console.log("Вы классический зритель");
+   } else if (personalMoviDB.count >= 30) {
+      console.log("Вы киноман");
+   }else{
+      console.log("Произошла ошибка");
+   }
+}, 
+showMyDB: function (hidden) {
+   if (!hidden) {
+      console.log(personalMoviDB);
+   }
+},
+tooggleVisibleMyDB: function() {
+      if(personalMoviDB.privat) {
+         personalMoviDB.privat = false;
+      } else {
+         personalMoviDB.privat = true;
+      }
+},
+writeYourGenres: function() {
+   for(let i = 1; i < 2; i++ ) {
+   //   let genre = prompt(`Ваш любимый жандр под номером ${i}`);
+
+   //   if(genre === '' || genre === null) {
+     //    console.log('Вы вели некорректные данные или не ввели их вовсе');
+       //  i--;
+     // }else {
+     //    personalMoviDB.genres[i - 1] = genre;
+    //  } 
+    
+    let genres = prompt(`Введите ваши любимые жандры через запятую`).toLocaleLowerCase();
+       if(genres === '' || genres === null) {
+         console.log('Вы вели некорректные данные или не ввели их вовсе');
+         i--;
+      }else {
+         personalMoviDB.genres = genres.split(', ');
+         personalMoviDB.genres.sort();
+      } 
+
+
+   }
+
+   personalMoviDB.genres.forEach((item, i) => {
+        console.log(`Любимый жанр ${i + 1} - это ${item}`);
+   });
+}
+   
+};
+
+
+
+
+
+
+
 
 
 
