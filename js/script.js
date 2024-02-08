@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 // ООП Прототипно - орентированное наследование.
 
@@ -178,6 +179,11 @@ console.log(border);*/
 // Callback функции.
 
 /*"use strict";
+=======
+// Callback функции.
+
+"use strict";
+>>>>>>> 55c5783324947e8dc39c33758174db71636ceb57
 
 function first() {
    // Do something
@@ -202,8 +208,23 @@ function done() {
    console.log('Я прошел этот урок!');
 }
 
+<<<<<<< HEAD
 learnJS('JavaScript', done);*/
    
+=======
+learnJS('JavaScript', done);
+     
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 55c5783324947e8dc39c33758174db71636ceb57
 
 
 
@@ -344,6 +365,16 @@ writeYourGenres(); */
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 55c5783324947e8dc39c33758174db71636ceb57
 /*let num = 20;
 
 function showFirstMessage(text) {
@@ -577,6 +608,7 @@ if(personalMoviDB.count < 10) {
 }
 
 
+<<<<<<< HEAD
 
 console.log(personalMoviDB);*/
 //****************************
@@ -699,6 +731,12 @@ writeYourGenres: function() {
 
 
 
+=======
+<<<<<<< HEAD
+console.log(personalMoviDB);*/
+//****************************
+//console.log(personalMoviDB);
+>>>>>>> 55c5783324947e8dc39c33758174db71636ceb57
 
 
 
